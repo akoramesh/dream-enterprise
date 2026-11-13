@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Dream Enterprise</title>
+  <meta name="description" content="Get in touch with Dream Enterprise. We respond within one business day — for national and international inquiries.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-overlay" id="navOverlay"></div>
+  <header>
+    <div class="container nav">
+      <div class="nav-left">
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <a href="index.html" class="logo">Dream <span>Enterprise</span></a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <div class="nav-drawer-header">
+          <span>Menu</span>
+          <button type="button" class="nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="shop.html">Shop</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="ai-tools.html">AI Tools</a>
+        <a href="contact.html" class="active nav-cta">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Tell us about your business. We’ll get back to you within one business day.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let’s talk</h3>
+          <p>Whether you have a specific project in mind, need national market support, or are planning international expansion — we’re happy to start with a conversation.</p>
+          
+          <div class="item" style="margin-top: 28px;">
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hello@dreamenterprise.com">hello@dreamenterprise.com</a>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+15551234567">+1 (555) 123-4567</a>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div>
+              <strong>Hours</strong>
+              Monday – Friday, 9:00 am – 5:00 pm
+            </div>
+          </div>
+          
+          <div class="item">
+            <div>
+              <strong>Location</strong>
+              Serving clients remotely worldwide and in person by appointment
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form onsubmit="event.preventDefault(); alert('Thank you! This is a demo form. In a live site this would send your message.');">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="you@company.com">
+            </div>
+            <div>
+              <label for="business">Business / Organization</label>
+              <input type="text" id="business" name="business" placeholder="Optional">
+            </div>
+            <div>
+              <label for="scope">Scope of interest</label>
+              <select id="scope" name="scope">
+                <option value="">Select an option</option>
+                <option value="national">National / Local project</option>
+                <option value="international">International / Cross-border</option>
+                <option value="both">Both national & international</option>
+              </select>
+            </div>
+            <div>
+              <label for="interest">I’m interested in</label>
+              <select id="interest" name="interest">
+                <option value="">Select an option</option>
+                <option value="strategy">Business strategy</option>
+                <option value="brand">Brand & identity</option>
+                <option value="website">Website</option>
+                <option value="digital">Digital presence</option>
+                <option value="advisory">Ongoing advisory</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Tell us a bit about your business, markets, and what you’re looking for..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: white;">Dream <span>Enterprise</span></a>
+          <p>Helping ambitious businesses turn ideas into lasting results through strategy, branding, and digital solutions — nationally and internationally.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="shop.html">Shop</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="ai-tools.html">AI Tools</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="services.html">Strategy</a>
+          <a href="services.html">Brand Identity</a>
+          <a href="services.html">Websites</a>
+          <a href="services.html">Advisory</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="mailto:hello@dreamenterprise.com">hello@dreamenterprise.com</a>
+          <a href="tel:+15551234567">+1 (555) 123-4567</a>
+          <p style="opacity: 0.7; margin-top: 10px; font-size: 0.9rem;">Mon–Fri, 9am–5pm</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Dream Enterprise. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

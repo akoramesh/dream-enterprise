@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools | Dream Enterprise</title>
+  <meta name="description" content="AI-powered strategy advisor from Dream Enterprise. Results generate automatically as you select options.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <header>
+    <div class="container nav">
+      <div class="nav-left">
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <a href="index.html" class="logo">Dream <span>Enterprise</span></a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <div class="nav-drawer-header">
+          <span>Menu</span>
+          <button type="button" class="nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="shop.html">Shop</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="ai-tools.html" class="active">AI Tools</a>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>AI Strategy Tools</h1>
+      <p>Select your options — recommendations generate automatically</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <div class="eyebrow">Interactive</div>
+        <h2>AI Business Strategy Advisor</h2>
+        <p>Fill every field below. Results appear on their own — no button needed.</p>
+      </div>
+
+      <div class="ai-tool-card">
+        <div class="ai-form" id="aiForm">
+          <div class="form-group">
+            <label for="industry">Your industry</label>
+            <select id="industry">
+              <option value="">Select industry…</option>
+              <option value="retail">Retail &amp; E‑commerce</option>
+              <option value="tech">Technology / SaaS</option>
+              <option value="professional">Professional services</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="hospitality">Hospitality &amp; tourism</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="goal">Primary goal</label>
+            <select id="goal">
+              <option value="">Select goal…</option>
+              <option value="growth">Grow revenue</option>
+              <option value="brand">Strengthen brand</option>
+              <option value="digital">Improve digital presence</option>
+              <option value="expand">Expand nationally / internationally</option>
+              <option value="ops">Sharpen operations &amp; strategy</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="market">Market focus</label>
+            <select id="market">
+              <option value="">Select focus…</option>
+              <option value="national">National / local</option>
+              <option value="international">International / cross‑border</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="stage">Business stage</label>
+            <select id="stage">
+              <option value="">Select stage…</option>
+              <option value="startup">Startup / early</option>
+              <option value="growing">Growing</option>
+              <option value="established">Established</option>
+              <option value="scaling">Scaling aggressively</option>
+            </select>
+          </div>
+          <p id="aiHint" style="color:#64748b;font-size:0.9rem;margin:0;">Complete all four fields to generate recommendations.</p>
+        </div>
+
+        <div class="ai-loading" id="aiLoading" hidden>
+          <div class="ai-spinner"></div>
+          <p>Generating recommendations…</p>
+        </div>
+
+        <div class="ai-result" id="aiResult" hidden>
+          <div class="ai-result-header">
+            <span class="ai-badge">AI Insights</span>
+            <button type="button" class="btn btn-outline" style="padding:8px 16px;font-size:0.9rem;" id="aiResetBtn">Reset</button>
+          </div>
+          <h3 id="aiTitle">Your growth path</h3>
+          <p id="aiSummary" class="ai-summary"></p>
+          <ul class="ai-actions" id="aiActions"></ul>
+          <div class="ai-next">
+            <p>Want a deeper plan with our team?</p>
+            <a href="contact.html" class="btn btn-primary">Talk to a strategist</a>
+            <a href="shop.html" class="btn btn-outline" style="margin-left:10px;">Browse toolkits</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recommended-section">
+    <div class="container">
+      <div class="section-title">
+        <div class="eyebrow">More tools</div>
+        <h2>Pair AI insights with proven kits</h2>
+      </div>
+      <div class="recommended-grid">
+        <a href="shop.html" class="rec-card">
+          <div class="rec-icon">📊</div>
+          <div>
+            <h4>Growth Strategy Canvas</h4>
+            <p>Turn AI suggestions into a one-page roadmap.</p>
+            <span class="rec-price">$49 · 4.9★</span>
+          </div>
+        </a>
+        <a href="shop.html" class="rec-card">
+          <div class="rec-icon">🚀</div>
+          <div>
+            <h4>International Expansion Checklist</h4>
+            <p>Ideal when expanding into new markets.</p>
+            <span class="rec-price">$39 · 5.0★</span>
+          </div>
+        </a>
+        <a href="shop.html" class="rec-card">
+          <div class="rec-icon">🎨</div>
+          <div>
+            <h4>Brand Identity Starter Pack</h4>
+            <p>When brand strength is a priority.</p>
+            <span class="rec-price">$79 · 4.8★</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready for a human + AI partnership?</h2>
+      <p>We combine these frameworks with hands-on advisory for national and international growth.</p>
+      <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: white;">Dream <span>Enterprise</span></a>
+          <p>Helping ambitious businesses turn ideas into lasting results through strategy, branding, and digital solutions.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="shop.html">Shop</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="ai-tools.html">AI Tools</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="services.html">Strategy</a>
+          <a href="services.html">Brand Identity</a>
+          <a href="services.html">Websites</a>
+          <a href="services.html">Advisory</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="mailto:hello@dreamenterprise.com">hello@dreamenterprise.com</a>
+          <a href="tel:+15551234567">+1 (555) 123-4567</a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Dream Enterprise. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+  <script>
+(function () {
+  var adviceMap = {
+    growth: {
+      title: 'Revenue growth focus',
+      summary: 'Prioritize a clear offer, conversion paths, and a simple growth loop you can measure weekly.',
+      actions: [
+        'Define one primary offer and one primary customer segment for the next 90 days.',
+        'Map your sales funnel and fix the biggest drop-off (usually messaging or follow-up).',
+        'Set 3 leading metrics (qualified leads, conversion rate, average deal size).',
+        'Use the Growth Strategy Canvas to lock the plan on one page.'
+      ]
+    },
+    brand: {
+      title: 'Brand strength focus',
+      summary: 'A sharper identity and consistent story will make every campaign and partnership work harder.',
+      actions: [
+        'Clarify positioning in one sentence: who you help, how, and why you are different.',
+        'Audit visual and verbal identity across website, social, and proposals.',
+        'Create a short brand story and proof points (results, clients, process).',
+        'Consider the Brand Identity Starter Pack for templates and messaging guides.'
+      ]
+    },
+    digital: {
+      title: 'Digital presence focus',
+      summary: 'Treat your website and content as a conversion system, not a brochure.',
+      actions: [
+        'Ensure every key page has a clear headline, proof, and one primary call-to-action.',
+        'Add case studies or results that match your target market.',
+        'Set up analytics and track form submissions and key button clicks.',
+        'Use the Website Conversion Playbook for proven page structures.'
+      ]
+    },
+    expand: {
+      title: 'Market expansion focus',
+      summary: 'Expand with a readiness checklist and local relevance — not a copy-paste of your home market.',
+      actions: [
+        'Validate demand and competition in the target market before heavy spend.',
+        'Adapt messaging and offers for local language, culture, and buying behaviour.',
+        'Identify 2–3 potential partners or channels in the new market.',
+        'Work through the International Expansion Checklist before launch.'
+      ]
+    },
+    ops: {
+      title: 'Strategy & operations focus',
+      summary: 'Clarity on priorities and rhythm will free capacity for growth instead of constant firefighting.',
+      actions: [
+        'Run a simple quarterly planning session with 3 priorities max.',
+        'Document ownership and success metrics for each priority.',
+        'Introduce a light weekly or bi-weekly review to stay on track.',
+        'Use the Quarterly Business Review Template for structure.'
+      ]
+    }
+  };
+
+  var timer = null;
+
+  function vals() {
+    return {
+      industry: document.getElementById('industry').value,
+      goal: document.getElementById('goal').value,
+      market: document.getElementById('market').value,
+      stage: document.getElementById('stage').value
+    };
+  }
+
+  function autoAdvise() {
+    var v = vals();
+    var hint = document.getElementById('aiHint');
+    var result = document.getElementById('aiResult');
+    var loading = document.getElementById('aiLoading');
+
+    if (!v.industry || !v.goal || !v.market || !v.stage) {
+      if (hint) hint.style.display = 'block';
+      if (result) result.hidden = true;
+      if (loading) loading.hidden = true;
+      return;
+    }
+
+    if (hint) hint.style.display = 'none';
+    if (result) result.hidden = true;
+    if (loading) loading.hidden = false;
+
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      generate(v);
+    }, 500);
+  }
+
+  function generate(v) {
+    var base = adviceMap[v.goal] || adviceMap.growth;
+    var extra = [];
+
+    if (v.market === 'international' || v.market === 'both') {
+      extra.push('Plan for cross-border collaboration: time zones, payments, and local partnerships.');
+    }
+    if (v.market === 'national') {
+      extra.push('Double down on local proof, referrals, and community or industry networks.');
+    }
+    if (v.stage === 'startup' || v.stage === 'growing') {
+      extra.push('Keep the plan lightweight: one offer, one channel, one metric that matters most.');
+    }
+    if (v.stage === 'scaling' || v.stage === 'established') {
+      extra.push('Protect focus: pause low-ROI initiatives so the team can execute.');
+    }
+    if (v.industry === 'tech') {
+      extra.push('Emphasize product-led proof (demos, trials, case metrics) in your story.');
+    }
+    if (v.industry === 'retail') {
+      extra.push('Align brand and conversion paths across online and offline channels.');
+    }
+    if (v.industry === 'professional') {
+      extra.push('Lead with expertise and outcomes; use case studies and referrals as primary proof.');
+    }
+    if (v.industry === 'manufacturing') {
+      extra.push('Highlight reliability, quality systems, and supply-chain strengths.');
+    }
+    if (v.industry === 'hospitality') {
+      extra.push('Focus on experience consistency, reviews, and local + digital discovery.');
+    }
+
+    document.getElementById('aiTitle').textContent = base.title;
+    document.getElementById('aiSummary').textContent = base.summary;
+    var list = document.getElementById('aiActions');
+    list.innerHTML = '';
+    base.actions.concat(extra).forEach(function (item) {
+      var li = document.createElement('li');
+      li.textContent = item;
+      list.appendChild(li);
+    });
+
+    document.getElementById('aiLoading').hidden = true;
+    document.getElementById('aiResult').hidden = false;
+  }
+
+  function resetAdvisor() {
+    ['industry', 'goal', 'market', 'stage'].forEach(function (id) {
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('aiResult').hidden = true;
+    document.getElementById('aiLoading').hidden = true;
+    var hint = document.getElementById('aiHint');
+    if (hint) hint.style.display = 'block';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    ['industry', 'goal', 'market', 'stage'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('change', autoAdvise);
+    });
+    var resetBtn = document.getElementById('aiResetBtn');
+    if (resetBtn) resetBtn.addEventListener('click', resetAdvisor);
+  });
+})();
+  </script>
+</body>
+</html>
